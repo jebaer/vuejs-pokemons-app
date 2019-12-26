@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "css-build": "node-sass --omit-source-map-url public/sass/styles.scss public/css/bulma.css",
+    "css-build": "node-sass --omit-source-map-url public/sass/styles.sass public/css/styles.css",
     "css-watch": "npm run css-build -- --watch",
     "start": "npm run css-build && npm run serve"
   },

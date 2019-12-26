@@ -1,5 +1,5 @@
 <template>
-<header class="columns  is-mobile is-vcentered has-background-primary">
+<header class="is-flex-row blue-background is-justify-between">
   <Title></Title>
   <ConnectUser></ConnectUser>
 </header>

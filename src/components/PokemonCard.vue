@@ -1,17 +1,35 @@
 <template>
-  <section class="container">
+  <section class="container is-center">
+      <div class="card is-quarter is-flex-row">
 
-    <div class="is-mobile columns pokemon-card is-vcentered">
+        <div class="is-flex-column is-justify-center is-align-centered is-flex-grow">
+          <img :src="pokemon[0].image"  width="100px" height="100px"/>
+        </div>
 
-      <div class="column">
-        <img :src="pokemon[0].image"/>
+        <div class="is-flex-column is-justify-center details">
+          <p class="is-bold">#{{ pokemon[0].id }}
+            <span class="is-text-special"> {{ pokemon[0].name }} </span>
+          </p>
+          <p ><span class="is-bold">Poids: </span>{{ pokemon[0].height}}</p>
+          <p><span class="is-bold">Taille: </span>{{ pokemon[0].weight }}</p>
+          <p><span class="is-bold">Type: </span>{{ pokemon[0].types }}</p>
+          <p><span class="is-bold">lvl {{ pokemon[0].evolve.level }}: </span>{{ pokemon[0].evolve["evolve-to"] }}
+            <span class="evol-pokemon"><img :src="pokemon[0].evolve.image" width="25px" height="25px"/></span>
+          </p>
+        </div>
+
       </div>
 
-      <div class="column">
-        <div class="is-flex">
-          <p id="pokemon-id">#{{ pokemon[0].id }}</p>
-          <p class="has-text-link is-uppercase is-bold">{{ pokemon[0].name }}</p>
-        </div>
+    <div class="card is-quarter is-flex-row">
+
+      <div class="is-flex-column is-justify-center">
+        <img :src="pokemon[0].image"  width="100px" height="100px"/>
+      </div>
+
+      <div class="is-flex-column is-justify-center">
+        <p id="pokemon-id">#{{ pokemon[0].id }}
+          <span class="has-text-link is-uppercase is-bold"> {{ pokemon[0].name }} </span>
+        </p>
         <p>Poids: {{ pokemon[0].height}}</p>
         <p>Taille: {{ pokemon[0].weight }}</p>
         <p>Type: {{ pokemon[0].types }}</p>
@@ -22,6 +40,65 @@
 
     </div>
 
+    <div class="card is-quarter is-flex-row">
+
+      <div class="is-flex-column is-justify-center">
+        <img :src="pokemon[0].image"  width="100px" height="100px"/>
+      </div>
+
+      <div class="is-flex-column is-justify-center">
+        <p id="pokemon-id">#{{ pokemon[0].id }}
+          <span class="has-text-link is-uppercase is-bold"> {{ pokemon[0].name }} </span>
+        </p>
+        <p>Poids: {{ pokemon[0].height}}</p>
+        <p>Taille: {{ pokemon[0].weight }}</p>
+        <p>Type: {{ pokemon[0].types }}</p>
+        <p>lvl {{ pokemon[0].evolve.level }}: {{ pokemon[0].evolve["evolve-to"] }}
+          <span class="evol-pokemon"><img :src="pokemon[0].evolve.image" width="25px" height="25px"/></span>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="card is-quarter is-flex-row">
+
+      <div class="is-flex-column is-justify-center">
+        <img :src="pokemon[0].image"  width="100px" height="100px"/>
+      </div>
+
+      <div class="is-flex-column is-justify-center">
+        <p id="pokemon-id">#{{ pokemon[0].id }}
+          <span class="has-text-link is-uppercase is-bold"> {{ pokemon[0].name }} </span>
+        </p>
+        <p>Poids: {{ pokemon[0].height}}</p>
+        <p>Taille: {{ pokemon[0].weight }}</p>
+        <p>Type: {{ pokemon[0].types }}</p>
+        <p>lvl {{ pokemon[0].evolve.level }}: {{ pokemon[0].evolve["evolve-to"] }}
+          <span class="evol-pokemon"><img :src="pokemon[0].evolve.image" width="25px" height="25px"/></span>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="card is-quarter is-flex-row">
+
+      <div class="is-flex-column is-justify-center">
+        <img :src="pokemon[0].image"  width="100px" height="100px"/>
+      </div>
+
+      <div class="is-flex-column is-justify-center">
+        <p id="pokemon-id">#{{ pokemon[0].id }}
+          <span class="has-text-link is-uppercase is-bold"> {{ pokemon[0].name }} </span>
+        </p>
+        <p>Poids: {{ pokemon[0].height}}</p>
+        <p>Taille: {{ pokemon[0].weight }}</p>
+        <p>Type: {{ pokemon[0].types }}</p>
+        <p>lvl {{ pokemon[0].evolve.level }}: {{ pokemon[0].evolve["evolve-to"] }}
+          <span class="evol-pokemon"><img :src="pokemon[0].evolve.image" width="25px" height="25px"/></span>
+        </p>
+      </div>
+
+    </div>
   </section>
 </template>
 
@@ -39,10 +116,4 @@ export default {
 </script>
 
 <style lang="sass">
-  .pokemon-card
-    margin: 25px
-    background-color: lighten(#E6EBE0, 5%)
-
-  #pokemon-id
-    margin-right: 15px
 </style>

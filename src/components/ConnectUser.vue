@@ -1,9 +1,9 @@
 <template>
-  <div class="column has-text-centered">
-    <div @click="connectUser()" class="is-inline-flex">
+  <div class="is-flex-column is-align-centered is-justify-center">
+    <div @click="connectUser()" class="clickable">
       <span class="circle-wrapper"  v-bind:class="{connected: connected}"></span>
     </div>
-    <p  class="has-text-link is-half">
+    <p  class="is-text-special no-margin">
       <span v-if="connected">{{ playerName }}</span>
       <span v-else> Inconnu </span>
     </p>
@@ -29,7 +29,12 @@ export default {
 </script>
 
 <style lang="sass">
+  div
+    min-width: 70px
+
   span.circle-wrapper
+    display: inline-flex
+    margin-left: 17px
     min-width: 30px
     max-width: 30px
     min-height: 30px

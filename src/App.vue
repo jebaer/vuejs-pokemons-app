@@ -1,5 +1,5 @@
 <template>
-  <div class="" id="app">
+  <div class="grey-background" id="app">
     <myHeader></myHeader>
     <PokemonCard></PokemonCard>
   </div>
@@ -19,8 +19,10 @@ export default {
 </script>
 
 <style lang="sass">
-body
-  font-size: 12px
-  font-family: sans-serif
-  color: #000
+  body
+    font-size: 0.9rem
+    font-family: "Josefin Sans"
+    color: #000
+  #app
+    min-height: 100vh
 </style>
