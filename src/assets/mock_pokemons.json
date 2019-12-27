@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "name": "Bulbizarre",
+    "height": 7,
+    "weight": 69,
+    "types": [ "poison", "grass"],
+    "evolve": {
+      "level": 16,
+      "evolve-to": "Herbizarre",
+      "image": "https://pokeres.bastionbot.org/images/pokemon/2.png"
+    },
+    "image": "https://pokeres.bastionbot.org/images/pokemon/1.png"
+  },
+  {
+    "id": 4,
+    "name": "Salamèche",
+    "height": 6,
+    "weight": 85,
+    "types": [ "fire"],
+    "evolve": {
+      "level": 16,
+      "evolve-to": "Reptincel",
+      "image": "https://pokeres.bastionbot.org/images/pokemon/5.png"
+    },
+    "image": "https://pokeres.bastionbot.org/images/pokemon/4.png"
+  },
+  {
+    "id": 7,
+    "name": "Carapuce",
+    "height": 5,
+    "weight": 90,
+    "types": [ "water"],
+    "evolve": {
+      "level": 16,
+      "evolve-to": "Carabaffe",
+      "image": "https://pokeres.bastionbot.org/images/pokemon/8.png"
+    },
+    "image": "https://pokeres.bastionbot.org/images/pokemon/7.png"
+  }
+]
