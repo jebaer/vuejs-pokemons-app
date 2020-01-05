@@ -3,7 +3,7 @@
 
     <div class="card is-quarter is-flex-row" v-for="pokemon in pokemons" :key="pokemon.id">
 
-      <div class="is-flex-column is-justify-center is-align-centered is-flex-grow">
+      <div class="is-flex-column is-justify-center is-align-centered is-flex-grow is-margin-right-20">
         <img :src="pokemon.image"  width="100px" height="100px"/>
       </div>
 
@@ -17,9 +17,7 @@
         <p class="no-margin">
           <span class="is-bold">Taille: </span>{{ pokemon.weight }}
         </p>
-        <p class="no-margin">
-          <span class="is-bold">Type: </span>{{ pokemon.types }}
-        </p>
+        <Types :types="pokemon.types"></Types>
         <p class="no-margin">
           <span class="is-bold">lvl {{ pokemon.evolve.level }}: </span>{{ pokemon.evolve["evolve-to"] }}
           <span class=""><img :src="pokemon.evolve.image" width="25px" height="25px"/></span>
@@ -33,9 +31,13 @@
 
 <script>
 import Pokemons from "../assets/mock_pokemons.json"
+import Types from "./pokemonCard/Types";
 
 export default {
   name: "pokemonCard",
+  components: {
+    Types
+  },
   data() {
     return {
       pokemons: Pokemons

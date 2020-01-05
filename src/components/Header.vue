@@ -6,8 +6,8 @@
 </template>
 
 <script>
-  import ConnectUser from "./ConnectUser.vue"
-  import Title from "./Title.vue"
+  import ConnectUser from "./header/ConnectUser.vue"
+  import Title from "./header/Title.vue"
   export default {
     name: "myHeader",
     components: {
