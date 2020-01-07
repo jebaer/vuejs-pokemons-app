@@ -8,20 +8,10 @@
       </div>
 
       <div class="is-flex-column is-justify-center details">
-        <p class="is-bold no-margin">#{{ pokemon.id }}
-          <span class="is-text-special"> {{ pokemon.name }} </span>
-        </p>
-        <p class="no-margin">
-          <span class="is-bold">Poids: </span>{{ pokemon.height}}
-        </p>
-        <p class="no-margin">
-          <span class="is-bold">Taille: </span>{{ pokemon.weight }}
-        </p>
+        <Identifier :id="pokemon.id" :name="pokemon.name"></Identifier>
+        <Measures :height="pokemon.height" :weight="pokemon.weight"></Measures>
         <Types :types="pokemon.types"></Types>
-        <p class="no-margin">
-          <span class="is-bold">lvl {{ pokemon.evolve.level }}: </span>{{ pokemon.evolve["evolve-to"] }}
-          <span class=""><img :src="pokemon.evolve.image" width="25px" height="25px"/></span>
-        </p>
+        <Evolution :evolution="pokemon.evolve"></Evolution>
       </div>
 
     </div>
@@ -31,11 +21,17 @@
 
 <script>
 import Pokemons from "../assets/mock_pokemons.json"
+import Evolution from "./pokemonCard/Evolution";
+import Identifier from "./pokemonCard/Identifier";
 import Types from "./pokemonCard/Types";
+import Measures from "./pokemonCard/Measures";
 
 export default {
   name: "pokemonCard",
   components: {
+    Evolution,
+    Identifier,
+    Measures,
     Types
   },
   data() {

@@ -5,7 +5,6 @@
 </template>
 
 <script>
-
     export default {
         name: "Types.vue",
         props: {
@@ -16,7 +15,3 @@
         },
     }
 </script>
-
-<style scoped>
-
-</style>
