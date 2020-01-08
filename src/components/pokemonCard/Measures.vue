@@ -1,10 +1,10 @@
 <template>
     <div>
         <p class="no-margin">
-            <span class="is-bold">Taille: </span>{{ height }}
+            <span class="is-bold">Taille: </span>{{ convertHeight }} m
         </p>
         <p class="no-margin">
-            <span class="is-bold">Poids: </span>{{ weight }}
+            <span class="is-bold">Poids: </span>{{ convertWeight }} kg
         </p>
     </div>
 </template>
@@ -20,6 +20,14 @@
             weight: {
                 type: Number,
                 required: true
+            }
+        },
+        computed:{
+            convertHeight() {
+                return Math.floor(this.height * 10 )  / 100 ;
+            },
+            convertWeight() {
+                return Math.floor( this.weight * 10 )  / 100  ;
             }
         }
     }
